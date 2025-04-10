@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -384,7 +383,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -416,24 +415,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1822618630}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5913dd958a6c414a8165a81fb0707f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fastSpeed: 80
-  normalSpeed: 40
-  rotationSpeed: 40
-  moveSpeed: 40
-  moveTime: 40
-  newPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1551335263
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1822618630}
+  - component: {fileID: 1822618631}
   m_Layer: 0
   m_Name: Focal Point
   m_TagString: Untagged
@@ -571,6 +553,29 @@ Transform:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822618631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822618629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5913dd958a6c414a8165a81fb0707f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fastSpeed: 80
+  normalSpeed: 40
+  rotationSpeed: 200
+  moveSpeed: 40
+  moveTime: 5
+  cameraTransform: {fileID: 963194228}
+  newPosition: {x: 0, y: 0, z: 0}
+  zoomAmount: {x: 0, y: -1, z: 1}
+  newZoom: {x: 0, y: 0, z: 0}
+  dragStartPos: {x: 0, y: 0, z: 0}
+  dragEndPos: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
